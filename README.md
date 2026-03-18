@@ -30,14 +30,14 @@ Isaac Lab中文文档: [链接-Isaac Lab install](https://docs.robotsfan.com/isa
 这个库是对PPO的代码的具体实现，这里我们主要关注下面的几个文件即可：
 ```
 rsl_rl/
-├── algorithms/ 这个文件是PPO算法的实现部分，包括损失函数、actor critic的mlp的更新逻辑，包含了models的网络初始化
-├── env/ 这个是环境env.py的封装，为算法库提供了比如step、get_observations等接口的调用
-├── extensions/ 一些拓展，比如镜像设置、随机网络蒸馏等（雅加达游戏）
-├── models/ 这个是模块的调用
-├── modules/ 一些比如mlp、cnn等模块的代码实现
-├── runners/on_policy_runner.py 主要在train.py中调用的函数文件，相当于是一个main.py，里面集合了algorithms、modules等所有的实现
-├── storage/ 进行环境rollout和代码，定义了replay buffer
-├── utils/  一些工具
+├── algorithms/        %这个文件是PPO算法的实现部分，包括损失函数、actor critic的mlp的更新逻辑，包含了models的网络初始化
+├── env/               %这个是环境env.py的封装，为算法库提供了比如step、get_observations等接口的调用
+├── extensions/        %一些拓展，比如镜像设置、随机网络蒸馏等（雅加达游戏）
+├── models/            %这个是模块的调用
+├── modules/           %一些比如mlp、cnn等模块的代码实现
+├── runners/on_policy_runner.py %主要在train.py中调用的函数文件，相当于是一个main.py，里面集合了algorithms、modules等所有的实现
+├── storage/           %进行环境rollout和代码，定义了replay buffer
+├── utils/             %一些工具
 └── __init__.py
 ```
 
