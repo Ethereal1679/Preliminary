@@ -54,4 +54,11 @@ rsl_rl/
 
 # 6. 经典论文推荐
 这里为了便于了解和学习，我将一些比较经典的论文进行了整理和简单的说明，便于你们进行系统性的学习。
+## 6.1 四足机器人
+- **Learning Quadrupedal Locomotion over Challenging Terrain** 强化学习开山之作，盲狗
+- 
+## 6.2 人形机器人
+
+# 7. sim2real
+仿真到现实还是有一定差距的，因此
 
