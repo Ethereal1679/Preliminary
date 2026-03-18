@@ -69,6 +69,9 @@ rsl_rl/
   
 - 其实还应该有第三种，就是motion tracking的任务，这种任务对于人形机器人来说主要就是为了完成动作模仿任务，比方说跳舞、杂技等（详见2026宇树春节联欢晚会）、像人类一样的直膝行走等，而对于其他机器人主要就是各种步态的模仿，比如四足机器人希望走狼的步态、豹子的步态等等，使用的方法基本是基于AMP的动作对抗生成。
 
+## 5.1 推荐可复现的github项目
+- 人形动作
+
 # 6. 经典论文推荐
 这里为了便于了解和学习，我将一些比较经典的论文进行了整理和简单的说明，便于你们进行系统性的学习。
 ## 6.1 四足机器人
@@ -114,9 +117,11 @@ rsl_rl/
 - 《Deep Whole-body Parkour》 庄子文大佬的全身跑酷系列
 - 《Attention-Based Map Encoding for Learning Generalized Legged Locomotion》 使用注意力机制学习最优落足点
 - 《BeamDojo: Learning Agile Humanoid Locomotion on Sparse Footholds》 梅花桩行走的两阶段迁移任务，从平坦地形到复杂地形
- 
+
+
 ## 6.5 VLA相关
 to be continue~
+
 
 # 7. 真机部署
 ```
