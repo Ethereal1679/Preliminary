@@ -70,59 +70,59 @@ rsl_rl/
 - 其实还应该有第三种，就是motion tracking的任务，这种任务对于人形机器人来说主要就是为了完成动作模仿任务，比方说跳舞、杂技等（详见2026宇树春节联欢晚会）、像人类一样的直膝行走等，而对于其他机器人主要就是各种步态的模仿，比如四足机器人希望走狼的步态、豹子的步态等等，使用的方法基本是基于AMP的动作对抗生成。
 
 ## 5.1 推荐可复现的github项目
-- 四足机器人locomotion任务：[Legged Gym](https://github.com/leggedrobotics/legged_gym) 以及 [Extreme Parkour](https://github.com/chengxuxin/extreme-parkour) 以及 [HIM](https://github.com/InternRobotics/HIMLoco) 以及 [Walk These Ways](https://github.com/Improbable-AI/walk-these-ways)
-- 人形机器人动作跟踪模仿任务：[H2O](https://github.com/LeCAR-Lab/human2humanoid) 和 [BeyondMimic](https://github.com/HybridRobotics/whole_body_tracking)
+- 四足机器人locomotion任务：[Legged Gym](https://github.com/leggedrobotics/legged_gym) 、 [Extreme Parkour](https://github.com/chengxuxin/extreme-parkour) 、 [HIM](https://github.com/InternRobotics/HIMLoco) 、 [Walk These Ways](https://github.com/Improbable-AI/walk-these-ways)
+- 人形机器人动作跟踪模仿任务：[H2O](https://github.com/LeCAR-Lab/human2humanoid) 、 [BeyondMimic](https://github.com/HybridRobotics/whole_body_tracking)
 - 人形机器人locomotion任务：[Humanoid Gym](https://github.com/roboterax/humanoid-gym) 
 
 # 6. 经典论文推荐
 这里为了便于了解和学习，我将一些比较经典的论文进行了整理和简单的说明，便于你们进行系统性的学习。
 ## 6.1 四足机器人
-- **《Learning Quadrupedal Locomotion over Challenging Terrain》** 强化学习开山之作，盲狗
-- 《RMA: Rapid Motor Adaptation for Legged Robots》 师生网络蒸馏，使用更长时间的历史本体观测序列，历史观测编码器推理较慢无需实时
-- 《Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior》 早期四足机器人多步态的探索
-- 《CTS: Concurrent Teacher-Student Reinforcement Learning for Legged Locomotion》 两阶段并为一阶段的训练方法
-- 《DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning》 使用VAE进行特权信息估计
-- 《Extreme Parkour with Legged Robots》 使用height scan到深度相机的师生蒸馏策略
-- 《Robot Parkour Learning》 使用深度相机
-- 《Hybrid Internal Model: Learning Agile Legged Locomotion with Simulated Robot Response》 使用对比学习替换传统的loss回归
+- **[《Learning Quadrupedal Locomotion over Challenging Terrain》](https://arxiv.org/abs/2010.11251)** 强化学习开山之作，盲狗
+- [《RMA: Rapid Motor Adaptation for Legged Robots》](https://arxiv.org/abs/2107.04034) 师生网络蒸馏，使用更长时间的历史本体观测序列，历史观测编码器推理较慢无需实时
+- [《Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior》](https://arxiv.org/abs/2212.03238) 早期四足机器人多步态的探索
+- [《CTS: Concurrent Teacher-Student Reinforcement Learning for Legged Locomotion》](https://arxiv.org/abs/2405.10830) 两阶段并为一阶段的训练方法
+- [《DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning》](https://arxiv.org/abs/2301.10602) 使用VAE进行特权信息估计
+- [《Extreme Parkour with Legged Robots》](https://arxiv.org/abs/2309.14341) 使用height scan到深度相机的师生蒸馏策略
+- [《Robot Parkour Learning》](https://arxiv.org/abs/2309.05665) 使用深度相机
+- [《Hybrid Internal Model: Learning Agile Legged Locomotion with Simulated Robot Response》](https://arxiv.org/abs/2312.11460) 使用对比学习替换传统的loss回归
 - 《Learning Robust and Agile Legged Locomotion Using Adversarial Motion Priors》 使用AMP提供四足的步态模仿
 
 ## 6.2 （带臂）四足机器人
-- 《Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion》 提出ROA这种师生网络交替更新的方法
-- 《UMI on Legs: Making Manipulation Policies Mobile with Manipulation-Centric Whole-body Controllers》 作者是UMI的提出者，用到了四足的WBC任务上
-- 《Helpful DoggyBot: Open-World Object Fetching using Legged Robots and Vision-Language Models》 用狗的leg或者mouth作为夹爪加持（比较fancy，不实用其实）
-
+- [《Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion》](https://arxiv.org/abs/2210.10044) 提出ROA这种师生网络交替更新的方法
+- [《UMI on Legs: Making Manipulation Policies Mobile with Manipulation-Centric Whole-body Controllers》](https://arxiv.org/abs/2407.10353) 作者是UMI的提出者，用到了四足的WBC任务上
+- [《Helpful DoggyBot: Open-World Object Fetching using Legged Robots and Vision-Language Models》](https://arxiv.org/abs/2410.00231) 用狗的leg或者mouth作为夹爪加持（比较fancy，不实用其实）
+  
 ## 6.3 人形机器人 -- 动作跟踪模仿
-- 《Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation》 何大佬的工作，人形动作模仿的开山之作
-- 《OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning》 何大佬的工作，人形动作模仿的开山之作
-- 《ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills》 2025年初实现科比跳投等高难度动作，采用real2sim2real的方法
-- 《Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking》 提供了人体重定向的方法，也就是生成机器人运动数据先验用于motion mimic的任务
-- 《TWIST: Teleoperated Whole-Body Imitation System》 和GMR同一个作者，方法继承实现动作跟踪
-- 《Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control》 将上下肢解耦控制 Exbody系列论文
-- 《Expressive Whole-Body Control for Humanoid Robots》 Exbody系列论文
-- 《ExBody2: Advanced Expressive Humanoid Whole-Body Control》 Exbody系列论文
-- 《Learning Humanoid Standing-up Control across Diverse Postures》 人形机器人分阶段起身，采用辅助力的策略比较有启发
-- 《OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction》 近期工作，与环境交互互动等
-- 《OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control》 宇树和高校联合的项目，实现机器人极端运动的跟踪和模仿，使用flow matching
-- 《SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control》 英伟达出的人形机器人中的“通用模型框架”
-- 《RobotDancing: Residual-Action Reinforcement Learning Enables Robust Long-Horizon Humanoid Motion Tracking》 人形机器人出残差action辅助训练
-- 《Track Any Motions under Any Disturbances》 预测极端外力干扰，进行强鲁棒的跳舞任务
-- 《Visual Imitation Enables Contextual Humanoid Control》 从视频中学习跳舞动作
-- 《CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks》 北理工的VR动作跟踪，加里程计进行位置感知
-- 《AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control》 动作跟踪，上下肢分离控制
-- 《BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion》 廖佬的开源动作跟踪框架，之前的MPC+WBC也是最初这位大佬开源的
+- [《Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation》](https://arxiv.org/abs/2403.04436) 何大佬的工作，人形动作模仿的开山之作
+- [《OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning》](https://arxiv.org/abs/2406.08858) 何大佬的工作，人形动作模仿的开山之作
+- [《ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills》](https://arxiv.org/abs/2502.01143) 2025年初实现科比跳投等高难度动作，采用real2sim2real的方法
+- [《Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking》](https://arxiv.org/abs/2510.02252) 提供了人体重定向的方法，也就是生成机器人运动数据先验用于motion mimic的任务
+- [《TWIST: Teleoperated Whole-Body Imitation System》](https://arxiv.org/abs/2505.02833) 和GMR同一个作者，方法继承实现动作跟踪
+- [《Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control》](https://arxiv.org/abs/2412.07773) 将上下肢解耦控制 Exbody系列论文
+- [《Expressive Whole-Body Control for Humanoid Robots》](https://arxiv.org/abs/2402.16796) Exbody系列论文
+- [《ExBody2: Advanced Expressive Humanoid Whole-Body Control》](https://arxiv.org/abs/2412.13196) Exbody系列论文
+- [《Learning Humanoid Standing-up Control across Diverse Postures》](https://arxiv.org/abs/2502.08378) 人形机器人分阶段起身，采用辅助力的策略比较有启发
+- [《OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction》](https://arxiv.org/abs/2509.26633) 近期工作，与环境交互互动等
+- [《OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control》](https://arxiv.org/abs/2602.23843) 宇树和高校联合的项目，实现机器人极端运动的跟踪和模仿，使用flow matching
+- [《SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control》](https://arxiv.org/abs/2511.07820) 英伟达出的人形机器人中的“通用模型框架”
+- [《RobotDancing: Residual-Action Reinforcement Learning Enables Robust Long-Horizon Humanoid Motion Tracking》](https://arxiv.org/abs/2509.20717) 人形机器人出残差action辅助训练
+- [《Track Any Motions under Any Disturbances》](https://arxiv.org/abs/2509.13833) 预测极端外力干扰，进行强鲁棒的跳舞任务
+- [《Visual Imitation Enables Contextual Humanoid Control》](https://arxiv.org/abs/2505.03729) 从视频中学习跳舞动作
+- [《CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks》](https://arxiv.org/abs/2506.08931) 北理工的VR动作跟踪，加里程计进行位置感知
+- [《AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control》](https://arxiv.org/abs/2505.03738) 动作跟踪，上下肢分离控制
+- [《BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion》](https://arxiv.org/abs/2508.08241) 廖佬的开源动作跟踪框架，之前的MPC+WBC也是最初这位大佬开源的
 
 ## 6.4 人形机器人 -- 全地形运动控制
-- 《Humanoid Parkour Learning》 人形感知跑酷
-- 《Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer》 比较推荐的人形机器人初学的框架，能训练出来一个机器人，也可移植自己的机器人进去
-- 《Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching》 使用原子技能库实现不同地形的跑酷，比如爬墙等
-- 《Deep Whole-body Parkour》 庄子文大佬的全身跑酷系列
-- 《Attention-Based Map Encoding for Learning Generalized Legged Locomotion》 使用注意力机制学习最优落足点
-- 《BeamDojo: Learning Agile Humanoid Locomotion on Sparse Footholds》 梅花桩行走的两阶段迁移任务，从平坦地形到复杂地形
+- [《Humanoid Parkour Learning》](https://arxiv.org/abs/2406.10759) 人形感知跑酷
+- [《Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer》](https://arxiv.org/abs/2404.05695) 比较推荐的人形机器人初学的框架，能训练出来一个机器人，也可移植自己的机器人进去
+- [《Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching》](https://arxiv.org/abs/2602.15827) 使用原子技能库实现不同地形的跑酷，比如爬墙等
+- [《Deep Whole-body Parkour》](https://arxiv.org/abs/2601.07701) 庄子文大佬的全身跑酷系列
+- [《Attention-Based Map Encoding for Learning Generalized Legged Locomotion》](https://arxiv.org/abs/2506.09588) 使用注意力机制学习最优落足点
+- [《BeamDojo: Learning Agile Humanoid Locomotion on Sparse Footholds》](https://arxiv.org/abs/2502.10363) 梅花桩行走的两阶段迁移任务，从平坦地形到复杂地形
 
 
 ## 6.5 VLA相关
-to be continue~
+to be continue...
 
 
 # 7. 真机部署
@@ -131,7 +131,7 @@ to be continue~
 Isaac Gym\Lab -> Mujoco -> Real world
 ```
 
-仿真到现实还是有一定差距的，因此可以现在mujoco中进行预部署，这个仿真环境相较于isaac系列会更接近真实世界（大概吧）。如果机器人用的是宇树的机器人的话（比如go2，go1或者g1），记住安全第一，记得先sim2sim到[链接-unitree mujoco](https://github.com/unitreerobotics/unitree_mujoco)，unitree mujoco中所有消息的收发方式、消息类型、关节顺序等与实机完全一致，在unitree mujoco中成功基本在实机中也能成功。
+仿真到现实还是有一定差距的，因此可以现在[Mujoco](https://github.com/google-deepmind/mujoco)中进行预部署，这个仿真环境相较于Isaac系列会更接近真实世界（大概吧）。如果机器人用的是宇树的机器人的话（比如go2，go1或者g1），记住安全第一，记得先sim2sim到[链接-unitree mujoco](https://github.com/unitreerobotics/unitree_mujoco)，unitree mujoco中所有消息的收发方式、消息类型、关节顺序等与实机完全一致，在unitree mujoco中成功基本在实机中也能成功。
 
 ## 7.1 Q&A 现实与仿真之间的gap 
 1. **现实的传感器存在误差**。    解决方法：在仿真中往观测数据里加噪声（legged gym/Isaac lab已实现）
