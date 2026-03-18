@@ -61,9 +61,13 @@ rsl_rl/
 - CTS: Concurrent Teacher-Student Reinforcement Learning for Legged Locomotion 两阶段并为一阶段的训练方法
 - DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning 使用VAE进行特权信息估计
 - Extreme Parkour with Legged Robots 使用height scan到深度相机的师生蒸馏策略
+- Robot Parkour Learning 使用深度相机
 - Hybrid Internal Model: Learning Agile Legged Locomotion with Simulated Robot Response 使用对比学习替换传统的loss回归
+- Learning Robust and Agile Legged Locomotion Using Adversarial Motion Priors 使用AMP提供四足的步态模仿
 ## 6.2 人形机器人
 
 # 7. sim2real
-仿真到现实还是有一定差距的，因此
+仿真到现实还是有一定差距的，因此可以现在mujoco中进行预部署，这个仿真环境相较于isaac系列会更接近真实世界（大概吧）
+安全第一，记得先sim2sim到[链接-unitree mujoco](https://github.com/unitreerobotics/unitree_mujoco)，unitree mujoco中所有消息的收发方式、消息类型、关节顺序等与实机完全一致，在unitree mujoco中成功基本在实机中也能成功
+
 
