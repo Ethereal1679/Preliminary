@@ -21,7 +21,18 @@ https://github.com/leggedrobotics/legged_gym。
 这个是基于Isaac Gym实现的对四足机器人的兼容框架，由苏黎世联邦理工大学和Nvidia联合开源（ETH，后面会反复提到这所在Robotics Engineering领域国际顶尖的学校），这个训练框架是目前所有框架的重要基础，只有真正弄懂了里面的代码逻辑和工程实现才算真正入门了这个方向。
 
 还有一个同样是ETH的RSL_RL库（**R**obotics **S**ystem **L**ab _ **R**einforcement **L**earning）：https://github.com/leggedrobotics/rsl_rl
-是对PPO的代码实现，
+这个库是对PPO的代码的具体实现，这里我们主要关注下面的几个文件即可：
+rsl_rl/
+├── algorithms/ 这个文件是PPO算法的实现部分，主要包含了
+├── env/ 这个是环境env.py的封装，为算法库提供了比如step、get_observations等接口
+├── extensions/
+├── models/
+├── modules/
+├── runners/
+├── storage/
+├── utils/
+└── __init__.py
+
 
 # 5. 主流任务
 目前主流的机器人有四足机器人、轮足机器人（包括四轮足、双轮足等）以及人形机器人等，这些机器人的RL运动控制任务主要有两类：
