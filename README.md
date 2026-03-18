@@ -28,6 +28,7 @@ Isaac Lab中文文档: [链接-Isaac Lab install](https://docs.robotsfan.com/isa
 
 还有一个同样是ETH的RSL_RL库（**R**obotics **S**ystem **L**ab _ **R**einforcement **L**earning）：[链接-rsl_rl](https://github.com/leggedrobotics/rsl_rl)
 这个库是对PPO的代码的具体实现，这里我们主要关注下面的几个文件即可：
+```
 rsl_rl/
 ├── algorithms/ 这个文件是PPO算法的实现部分，包括损失函数、actor critic的mlp的更新逻辑，包含了models的网络初始化
 ├── env/ 这个是环境env.py的封装，为算法库提供了比如step、get_observations等接口的调用
@@ -38,7 +39,7 @@ rsl_rl/
 ├── storage/ 进行环境rollout和代码，定义了replay buffer
 ├── utils/  一些工具
 └── __init__.py
-
+```
 
 # 5. 主流任务
 目前主流的机器人有四足机器人、轮足机器人（包括四轮足、双轮足等）以及人形机器人等，这些机器人的RL运动控制任务主要有两类：
