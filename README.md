@@ -1,4 +1,4 @@
-<img width="846" height="81" alt="image" src="https://github.com/user-attachments/assets/d0ec06d5-12a5-4320-9217-adbb39b99aa5" /># 1. Hello World!
+# 1. Hello World!
 hello! 作为一个刚接触RL robotics的小白，你一定有很多的疑问，不知道从哪里开始学习，下面是整理好的一个pipeline，帮助你循序渐进的知道自己需要了解什么，该学什么，该干什么。俗话说兴趣是最好的老师，如果遇到困难也请不要放弃，多问问老师学长，总会突破的！（笔者入门是想复刻迪士尼机器人研究院的BD-X机器人才一步步攻坚克难的）
 
 最好提前掌握的知识和技能（当然不会也没事儿，后面都能学会）：
@@ -64,10 +64,22 @@ rsl_rl/
 - Robot Parkour Learning 使用深度相机
 - Hybrid Internal Model: Learning Agile Legged Locomotion with Simulated Robot Response 使用对比学习替换传统的loss回归
 - Learning Robust and Agile Legged Locomotion Using Adversarial Motion Priors 使用AMP提供四足的步态模仿
-## 6.2 人形机器人
+
+## 6.2 （带臂）四足机器人
+
+
+## 6.3 人形机器人
 
 # 7. sim2real
 仿真到现实还是有一定差距的，因此可以现在mujoco中进行预部署，这个仿真环境相较于isaac系列会更接近真实世界（大概吧）
-安全第一，记得先sim2sim到[链接-unitree mujoco](https://github.com/unitreerobotics/unitree_mujoco)，unitree mujoco中所有消息的收发方式、消息类型、关节顺序等与实机完全一致，在unitree mujoco中成功基本在实机中也能成功
+安全第一，记得先sim2sim到[链接-unitree mujoco](https://github.com/unitreerobotics/unitree_mujoco)，unitree mujoco中所有消息的收发方式、消息类型、关节顺序等与实机完全一致，在unitree mujoco中成功基本在实机中也能成功。
 
+1.现实的传感器存在误差解决方法：在仿真中往观测数据里加噪声（legged gym/Isaac lab已实现）
+
+2.有些观测值没有传感器可以获得，比如线速度，周围地形的高度      解决方法：1.设计相关算法获得
+这些数据，比如使用里程计估计线速度，使用SLAM建图估计周围高度    2.在仿真中使用蒸馏方法，利用现实中可以获取到的信息估计无法直接获取的信息（ legged gym/Isaac lab未实现）
+
+3.各种复杂地形    解决方法：仿真里的地形尽量全涵盖，只要让模型见过，基本就能正常通过
+
+4.机器人质量、关节摩擦、足部与地面的动静摩擦力不确定    解决方法：域随机化，也即仿真里并行跑的环境，设置不同的物理参数，让网络学会各中物理参数下应该怎么做，例如设置随机的摩擦力、kp kd的值、身体的质量等
 
