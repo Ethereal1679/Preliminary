@@ -66,12 +66,24 @@ rsl_rl/
 - Learning Robust and Agile Legged Locomotion Using Adversarial Motion Priors 使用AMP提供四足的步态模仿
 
 ## 6.2 （带臂）四足机器人
-
-
+- Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion 提出ROA这种师生网络交替更新的方法
+- UMI on Legs: Making Manipulation Policies Mobile with Manipulation-Centric Whole-body Controllers 作者是UMI的提出者，用到了四足的WBC任务上
+- Helpful DoggyBot: Open-World Object Fetching using Legged Robots and Vision-Language Models  用狗的leg或者mouth作为夹爪加持（比较fancy，不实用其实）
+  
 ## 6.3 人形机器人
+- Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation 何大佬的工作，人形动作模仿的开山之作
+- OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning 何大佬的工作，人形动作模仿的开山之作
+- ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills 2025年初实现科比跳投等高难度动作，采用real2sim2real的方法
+- Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking  提供了人体重定向的方法，也就是生成机器人运动数据先验用于motion mimic的任务
+- Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control 将上下肢解耦控制 Exbody系列论文
+- Expressive Whole-Body Control for Humanoid Robots  Exbody系列论文
+- ExBody2: Advanced Expressive Humanoid Whole-Body Control  Exbody系列论文
+- 
+## 6.4 VLA略
 
-# 7. Sim2Sim2Real
+# 7. 真机部署
 ```
+"Sim2Sim2Real"
 Isaac Gym\Lab -> Mujoco -> Real world
 ```
 
