@@ -148,3 +148,4 @@ Isaac Gym\Lab -> Mujoco -> Real world
 
 # 8. 写在后面
 希望你们来到了HPC Robotics Lab，可以真正学到东西，而不是三天打鱼两天晒网，遇到不会的欢迎和我们交流
+WeChat: zsy15241308736
