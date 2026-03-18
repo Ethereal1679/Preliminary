@@ -70,16 +70,36 @@ rsl_rl/
 - UMI on Legs: Making Manipulation Policies Mobile with Manipulation-Centric Whole-body Controllers 作者是UMI的提出者，用到了四足的WBC任务上
 - Helpful DoggyBot: Open-World Object Fetching using Legged Robots and Vision-Language Models  用狗的leg或者mouth作为夹爪加持（比较fancy，不实用其实）
   
-## 6.3 人形机器人
+## 6.3 人形机器人 -- 动作跟踪模仿
 - Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation 何大佬的工作，人形动作模仿的开山之作
 - OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning 何大佬的工作，人形动作模仿的开山之作
 - ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills 2025年初实现科比跳投等高难度动作，采用real2sim2real的方法
 - Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking  提供了人体重定向的方法，也就是生成机器人运动数据先验用于motion mimic的任务
+- TWIST: Teleoperated Whole-Body Imitation System 和GMR同一个作者，方法继承实现动作跟踪
 - Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control 将上下肢解耦控制 Exbody系列论文
 - Expressive Whole-Body Control for Humanoid Robots  Exbody系列论文
 - ExBody2: Advanced Expressive Humanoid Whole-Body Control  Exbody系列论文
+- Learning Humanoid Standing-up Control across Diverse Postures 人形机器人分阶段起身，采用辅助力的策略比较有启发
+- OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction  近期工作，与环境交互互动等
+- OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control  宇树和高校联合的项目，实现机器人极端运动的跟踪和模仿，使用flow matching
+- SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control 英伟达出的人形机器人中的“通用模型框架”
+- RobotDancing: Residual-Action Reinforcement Learning Enables Robust Long-Horizon Humanoid Motion Tracking 人形机器人出残差action辅助训练
+- Track Any Motions under Any Disturbances 预测极端外力干扰，进行强鲁棒的跳舞任务
+- Visual Imitation Enables Contextual Humanoid Control 从视频中学习跳舞动作
+- CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks 北理工的VR动作跟踪，加里程计进行位置感知
+- AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control 动作跟踪，上下肢分离控制
+- BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion 廖佬的开源动作跟踪框架，之前的MPC+WBC也是最初这位大佬开源的
 - 
-## 6.4 VLA略
+## 6.4 人形机器人 -- 全地形运动控制
+- Humanoid Parkour Learning 人形感知跑酷
+- Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer 比较推荐的人形机器人初学的框架，能训练出来一个机器人，也可移植自己的机器人进去
+- Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching 使用原子技能库实现不同地形的跑酷，比如爬墙等
+- Deep Whole-body Parkour 庄子文大佬的全身跑酷系列
+- Attention-Based Map Encoding for Learning Generalized Legged Locomotion 使用注意力机制学习最优落足点
+- BeamDojo: Learning Agile Humanoid Locomotion on Sparse Footholds 梅花桩行走的两阶段迁移任务，从平坦地形到复杂地形
+ 
+## 6.5 VLA相关
+to be continue~
 
 # 7. 真机部署
 ```
