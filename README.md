@@ -1,4 +1,4 @@
-# 1. Hello World!
+<img width="846" height="81" alt="image" src="https://github.com/user-attachments/assets/d0ec06d5-12a5-4320-9217-adbb39b99aa5" /># 1. Hello World!
 hello! 作为一个刚接触RL robotics的小白，你一定有很多的疑问，不知道从哪里开始学习，下面是整理好的一个pipeline，帮助你循序渐进的知道自己需要了解什么，该学什么，该干什么。俗话说兴趣是最好的老师，如果遇到困难也请不要放弃，多问问老师学长，总会突破的！（笔者入门是想复刻迪士尼机器人研究院的BD-X机器人才一步步攻坚克难的）
 
 最好提前掌握的知识和技能（当然不会也没事儿，后面都能学会）：
@@ -56,7 +56,12 @@ rsl_rl/
 这里为了便于了解和学习，我将一些比较经典的论文进行了整理和简单的说明，便于你们进行系统性的学习。
 ## 6.1 四足机器人
 - **Learning Quadrupedal Locomotion over Challenging Terrain** 强化学习开山之作，盲狗
-- 
+- RMA: Rapid Motor Adaptation for Legged Robots 师生网络蒸馏，使用更长时间的历史本体观测序列，历史观测编码器推理较慢无需实时
+- Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior 早期四足机器人多步态的探索
+- CTS: Concurrent Teacher-Student Reinforcement Learning for Legged Locomotion 两阶段并为一阶段的训练方法
+- DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning 使用VAE进行特权信息估计
+- Extreme Parkour with Legged Robots 使用height scan到深度相机的师生蒸馏策略
+- Hybrid Internal Model: Learning Agile Legged Locomotion with Simulated Robot Response 使用对比学习替换传统的loss回归
 ## 6.2 人形机器人
 
 # 7. sim2real
